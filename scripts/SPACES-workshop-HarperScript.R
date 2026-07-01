@@ -4,5 +4,9 @@ library(ratdat)
 ggplot(complete_old,aes(x =hindfoot_length, y= weight))+
   geom_point()
 
-ggplot(complete_old,aes(x =hindfoot_length, y= weight, color=species))+
-  geom_point()
+myplot <- ggplot(complete_old,aes(x =hindfoot_length, y= weight, color=species))+
+  geom_point(alpha = 0.2)
+
+myplot+
+  theme_classic()
+myplot
